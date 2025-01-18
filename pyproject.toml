@@ -1,0 +1,33 @@
+[project]
+name = "pydantic-form-example"
+version = "0.1.0"
+description = "Example of forms using JSON Editor and pydantic"
+readme = "README.md"
+requires-python = ">=3.12"
+license = "Unlicense"
+license-files = [
+    "UNLICENSE",
+]
+dependencies = [
+    "fastapi",
+    "uvicorn",
+    "aiofiles",
+    "python-multipart",
+    "aiosqlite",
+    "pydantic-extra-types",
+]
+
+[dependency-groups]
+dev = [
+    "httpx",
+    "playwright",
+    "djlint",
+    "pre-commit",
+]
+
+[tool.ruff]
+line-length = 120
+fix = true
+show-fixes = true
+output-format = "full"
+target-version = "py313"
